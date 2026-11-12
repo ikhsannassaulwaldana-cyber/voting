@@ -1,0 +1,68 @@
+:root {
+    --navy: #12243a;
+    --navy-soft: #1d3858;
+    --gold: #d7ad62;
+    --gold-dark: #b98c3f;
+    --cream: #f7f4ed;
+    --ink: #263449;
+    --muted: #748093;
+    --line: #e9e5dc;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: "DM Sans", system-ui, Arial, sans-serif; }
+a { color: var(--gold-dark); }
+a:hover { color: var(--navy); }
+.nav-main { background: var(--navy); box-shadow: 0 8px 26px #12243a1c; }
+.navbar-brand { display: flex; align-items: center; gap: .65rem; letter-spacing: .06em; font-size: .9rem; }
+.brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold); font-family: "Playfair Display", Georgia, serif; font-size: .8rem; }
+.brand-name span { color: var(--gold); }
+.nav-link { color: #fff !important; opacity: .84; transition: color .2s, opacity .2s; }
+.nav-link:hover { color: var(--gold) !important; opacity: 1; }
+.page-content { min-height: calc(100vh - 180px); padding-top: 2rem; padding-bottom: 2rem; animation: page-in .45s ease both; }
+.btn-gold { background: var(--gold); border: 1px solid var(--gold); color: var(--navy); font-weight: 700; transition: .2s ease; }
+.btn-gold:hover, .btn-gold:focus { background: #e3c17f; border-color: #e3c17f; color: var(--navy); transform: translateY(-1px); }
+.btn-outline-gold { border: 1px solid var(--gold); color: var(--navy); font-weight: 700; }
+.btn-outline-gold:hover { background: var(--gold); color: var(--navy); }
+.hero { position: relative; overflow: hidden; border-radius: 28px; padding: clamp(2.5rem, 7vw, 6.5rem); color: #fff; background: radial-gradient(ellipse at 86% 16%, #d7ad624d, transparent 34%), linear-gradient(118deg, #102139 10%, #1d3858 100%); box-shadow: 0 24px 60px #12243a24; }
+.hero:after { content: ""; position: absolute; width: 300px; height: 300px; right: -80px; bottom: -180px; border: 1px solid #d7ad624d; border-radius: 50%; box-shadow: 0 0 0 24px #d7ad6210, 0 0 0 50px #d7ad620a; }
+.hero h1, .auth-brand h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 800; letter-spacing: -.03em; }
+.hero-copy { max-width: 650px; color: #e5e9ef; }
+.eyebrow { color: var(--gold-dark); font-size: .74rem; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+.hero .eyebrow { color: var(--gold); }
+.section-title { color: var(--navy); font-weight: 800; letter-spacing: -.025em; }
+.card { border: 1px solid #e8e4db; border-radius: 20px; box-shadow: 0 10px 28px #12243a0a; transition: transform .24s ease, box-shadow .24s ease; }
+.card-hover:hover { transform: translateY(-5px); box-shadow: 0 18px 38px #12243a17; }
+.stat { height: 100%; padding: 1.4rem; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+.stat-label { color: var(--muted); font-size: .88rem; font-weight: 600; }
+.stat-value { margin-top: .35rem; color: var(--navy); font-size: 1.85rem; font-weight: 800; }
+.badge-gold { background: #f4e8d0; color: #78551c; }
+.participant-photo { display: block; width: 100%; height: 250px; object-fit: cover; background: linear-gradient(145deg, #e8dcc4, #c0cbd2); }
+.photo-placeholder { display: grid; place-items: center; color: #fff; font-family: "Playfair Display", Georgia, serif; font-size: 4rem; font-weight: 700; background: radial-gradient(circle at 75% 15%, #d7ad6288, transparent 28%), linear-gradient(145deg, #1d3858, #718093); }
+.detail-photo { width: min(100%, 440px); min-height: 360px; max-height: 520px; height: 100%; object-fit: cover; border-radius: 20px; }
+.table { --bs-table-bg: transparent; vertical-align: middle; }
+.table thead th { color: var(--muted); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
+.form-control, .form-select { min-height: 46px; border-color: #ddd9d0; border-radius: 11px; }
+.form-control:focus, .form-select:focus { border-color: var(--gold); box-shadow: 0 0 0 .2rem #d7ad6230; }
+.footer { background: var(--navy); color: #fff; }
+.footer .small { color: #c4cbd4; }
+.auth-layout { min-height: min(720px, calc(100vh - 190px)); overflow: hidden; border: 1px solid var(--line); border-radius: 26px; background: #fff; box-shadow: 0 18px 50px #12243a12; }
+.auth-brand { min-height: 100%; padding: clamp(2rem, 5vw, 4.5rem); color: #fff; background: radial-gradient(ellipse at 80% 16%, #d7ad6252, transparent 35%), linear-gradient(135deg, #12243a, #1d3858); }
+.auth-brand .eyebrow { color: var(--gold); }
+.auth-form { padding: clamp(2rem, 5vw, 4rem); }
+.admin-shell { display: grid; grid-template-columns: 245px minmax(0, 1fr); gap: 1.5rem; align-items: start; }
+.admin-sidebar { position: sticky; top: 90px; padding: 1rem; border-radius: 20px; background: var(--navy); }
+.admin-sidebar .nav-link { display: block; padding: .7rem .85rem; border-radius: 10px; }
+.admin-sidebar .nav-link.active, .admin-sidebar .nav-link:hover { color: var(--navy) !important; background: var(--gold); opacity: 1; }
+.admin-content { min-width: 0; }
+.sidebar-heading { padding: .6rem .85rem 1rem; color: var(--gold); font-size: .76rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+.avatar-thumb { width: 48px; height: 48px; border-radius: 12px; object-fit: cover; }
+.avatar-thumb.photo-placeholder { font-size: 1.4rem; }
+.empty-state { padding: 3rem 1rem; color: var(--muted); text-align: center; }
+.pagination .page-link { color: var(--navy); }
+.pagination .active .page-link { color: var(--navy); border-color: var(--gold); background: var(--gold); }
+
+@keyframes page-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 991.98px) { .admin-shell { grid-template-columns: 1fr; } .admin-sidebar { position: static; } .admin-sidebar .nav { flex-direction: row !important; flex-wrap: wrap; } .admin-sidebar .nav-link { padding: .55rem .7rem; } }
+@media (max-width: 575.98px) { .hero { border-radius: 19px; } .participant-photo { height: 205px; } .detail-photo { min-height: 280px; } .auth-layout { border-radius: 19px; } }
